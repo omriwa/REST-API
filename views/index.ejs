@@ -1,0 +1,27 @@
+<% if(typeof username != "undefined") { %>
+    <h2>Hi dear <%= username %></h2>
+    
+    <form action="/update/user/<%= username %>" method="GET">
+        <input type="text" style="display:none" value="<%= username %>" name="userData[username]" placeholder="username"/>
+        <input type="password" style="display:none" value="<%= pass %>" name="userData[pass]" placeholder="password"/>
+        <button>Edit details!</button>
+    </form>
+    
+    <form action="/user/<%= username %>?_method=DELETE" method="POST">
+        <input type="text" style="display:none" value="<%= username %>" name="userData[username]" placeholder="username"/>
+        <input type="password" style="display:none" value="<%= pass %>" name="userData[pass]" placeholder="password"/>
+        <button>Delete user!</button>
+    </form>
+    
+    <form action="/user/<%= username %>" method="POST">
+        <input type="text" style="display:none" value="<%= username %>" name="userData[username]" placeholder="username"/>
+        <input type="password" style="display:none" value="<%= pass %>" name="userData[pass]" placeholder="password"/>
+        <button>See Details!</button>
+    </form>
+    <a href="/login">Logout!</a>
+<% } 
+    else { %>
+<a href="/login">login</a>
+<a href="/register">register</a>
+<a href="/user">Registered users</a>
+<% } %>

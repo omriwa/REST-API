@@ -1,0 +1,12 @@
+<h3>login Form</h3>
+<% if(typeof error != undefined) {%>
+        <h4><%= error %></h4>
+        <p>
+            Maybe you have to <a href="/register">register</a>?
+        </p>
+<% } %>
+<form action="/login" method="POST">
+    <input type="text" style="display:block" name="userData[username]" placeholder="username"/>
+    <input type="password" style="display:block" name="userData[pass]" placeholder="password"/>
+    <button>Login!</button>
+</form>

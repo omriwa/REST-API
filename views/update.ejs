@@ -1,0 +1,11 @@
+<h3>Update Form</h3>
+<form action="/user/<%= username %>?_method=PUT" method="POST">
+    <input type="text" style="display:none" name="userData[id]" placeholder="first name" value="<%= _id %>"/>
+    <input type="text" style="display:block" name="userData[fName]" placeholder="first name" value="<%= fName %>"/>
+    <input type="text" style="display:block" name="userData[lName]" placeholder="last name" value="<%= lName %>"/>
+    <input type="text" style="display:block" name="userData[address]" placeholder="address" value="<%= address %>"/>
+    <input type="text" style="display:block" name="userData[username]" placeholder="username" value="<%= username %>"/>
+    <input type="password" style="display:block" name="userData[pass]" placeholder="password" value="<%= pass %>"/>
+    <input type="email" style="display:block" name="userData[email]" placeholder="email" value="<%= email %>"/>
+    <button>Update!</button>
+</form>
